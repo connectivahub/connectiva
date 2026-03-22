@@ -106,11 +106,14 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     font-size: 0.9rem;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .nav-cta:hover {
     transform: translateY(-2px);
     box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+    text-decoration: none;
 }
 
 /* ============================================
@@ -208,7 +211,7 @@ body {
 }
 
 .hero-title {
-    font-size: 5rem;
+    font-size: 4.2rem;
     font-weight: 900;
     margin-bottom: 1.5rem;
     letter-spacing: -3px;
@@ -824,11 +827,14 @@ body {
     text-transform: uppercase;
     letter-spacing: 1.5px;
     box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+    text-decoration: none;
+    display: inline-block;
 }
 
 .cta-button:hover {
     transform: translateY(-3px);
     box-shadow: 0 15px 45px rgba(0, 212, 255, 0.5);
+    text-decoration: none;
 }
 
 .cta-button:active {
