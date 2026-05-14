@@ -1,4 +1,38 @@
 /* ============================================
+   MOBILE MENU TOGGLE
+   ============================================ */
+
+// Mobile menu functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    
+    if (mobileMenuToggle && navLinks) {
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenuToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            
+            // Prevent body scroll when menu is open
+            if (navLinks.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        });
+        
+        // Close menu when a link is clicked
+        const navLinksItems = navLinks.querySelectorAll('a');
+        navLinksItems.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+    }
+});
+
+/* ============================================
    CINEMATIC SCROLL INTERACTIONS
    ============================================ */
 
@@ -70,21 +104,6 @@ document.querySelectorAll('.help-card, .compliance-card, .stat').forEach(el => {
     el.style.opacity = '0';
     observer.observe(el);
 });
-
-// Mobile menu toggle (future expansion)
-function setupMobileMenu() {
-    const navLinks = document.querySelector('.nav-links');
-    const navCta = document.querySelector('.nav-cta');
-    
-    // Could add hamburger menu here for mobile
-    if (window.innerWidth <= 768) {
-        // Hide nav links on mobile
-        if (navLinks) navLinks.style.display = 'none';
-    }
-}
-
-window.addEventListener('load', setupMobileMenu);
-window.addEventListener('resize', setupMobileMenu);
 
 // Active nav link update
 window.addEventListener('scroll', () => {

@@ -11,6 +11,11 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">ConnectivaHub</div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="how-it-works.html">How It Works</a></li>
@@ -328,16 +333,74 @@
         }
 
         @media (max-width: 768px) {
+            .page-header {
+                padding-top: 100px;
+                min-height: 300px;
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+                background-attachment: scroll;
+            }
+
             .header-content h1 {
                 font-size: 2rem;
             }
 
+            .header-content p {
+                font-size: 1rem;
+            }
+
             .faq-section {
-                padding: 3rem 1.5rem;
+                padding: 4rem 1.5rem;
+            }
+
+            .faq-question {
+                padding: 1.2rem;
             }
 
             .faq-question h3 {
                 font-size: 1rem;
+                word-wrap: break-word;
+            }
+
+            .faq-answer {
+                padding: 1.5rem 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-header {
+                padding-top: 80px;
+                min-height: 250px;
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
+            .header-content h1 {
+                font-size: 1.6rem;
+            }
+
+            .header-content p {
+                font-size: 0.9rem;
+            }
+
+            .faq-section {
+                padding: 3rem 1rem;
+            }
+
+            .faq-question {
+                padding: 1rem;
+            }
+
+            .faq-question h3 {
+                font-size: 0.95rem;
+            }
+
+            .faq-answer {
+                padding: 1rem;
+            }
+
+            .faq-answer p {
+                font-size: 0.9rem;
             }
         }
     </style>

@@ -11,6 +11,11 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">ConnectivaHub</div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="how-it-works.html" class="active">How It Works</a></li>
@@ -268,6 +273,7 @@
         .process-section {
             padding: 6rem 3rem;
             background: var(--gray-subtle);
+            overflow-x: hidden;
         }
 
         .process-container {
@@ -282,6 +288,7 @@
         .process-step {
             text-align: center;
             padding: 2rem;
+            width: 100%;
         }
 
         .step-number {
@@ -298,11 +305,13 @@
             font-size: 1.5rem;
             margin-bottom: 1rem;
             color: var(--primary-light);
+            word-wrap: break-word;
         }
 
         .process-step p {
             color: rgba(224, 224, 224, 0.8);
             line-height: 1.6;
+            word-wrap: break-word;
         }
 
         .step-detail {
@@ -310,6 +319,7 @@
             margin-top: 1rem;
             color: var(--accent-blue);
             font-weight: 600;
+            word-wrap: break-word;
         }
 
         .process-arrow {
@@ -334,6 +344,7 @@
         .scenarios-section {
             padding: 6rem 3rem;
             background: var(--primary-dark);
+            overflow-x: hidden;
         }
 
         .scenarios-section h2 {
@@ -344,6 +355,7 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            word-wrap: break-word;
         }
 
         .scenarios-grid {
@@ -352,6 +364,18 @@
             gap: 2rem;
             max-width: 1400px;
             margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .scenarios-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .scenarios-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         .scenario-card {
@@ -488,20 +512,158 @@
         }
 
         @media (max-width: 768px) {
+            .page-header {
+                padding-top: 100px;
+                min-height: 300px;
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+                background-attachment: scroll;
+            }
+
+            .header-content h1 {
+                font-size: 2rem;
+                word-wrap: break-word;
+            }
+
+            .header-content p {
+                font-size: 1rem;
+                word-wrap: break-word;
+            }
+
+            .process-section,
+            .scenarios-section {
+                padding: 4rem 1.5rem;
+            }
+
             .process-container {
                 grid-template-columns: 1fr;
+                gap: 2rem;
             }
 
             .process-arrow {
                 display: none;
             }
 
-            .header-content h1 {
-                font-size: 2rem;
+            .process-step {
+                padding: 2rem 1.5rem;
+            }
+
+            .step-number {
+                font-size: 2.5rem;
+            }
+
+            .process-step h3 {
+                font-size: 1.5rem;
             }
 
             .scenarios-grid {
                 grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .scenarios-section h2 {
+                font-size: 2.2rem;
+            }
+
+            .scenario-card {
+                min-height: 300px;
+            }
+
+            .why-choose-section {
+                padding: 4rem 1.5rem;
+                background-attachment: scroll;
+            }
+
+            .why-content h2 {
+                font-size: 2.2rem;
+                word-wrap: break-word;
+            }
+
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-header {
+                padding-top: 80px;
+                min-height: 250px;
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
+            .header-content h1 {
+                font-size: 1.6rem;
+            }
+
+            .header-content p {
+                font-size: 0.9rem;
+            }
+
+            .process-section,
+            .scenarios-section {
+                padding: 3rem 1rem;
+            }
+
+            .scenarios-section h2 {
+                font-size: 1.8rem;
+                margin-bottom: 2rem;
+            }
+
+            .process-step {
+                padding: 1.5rem 1rem;
+            }
+
+            .step-number {
+                font-size: 2rem;
+            }
+
+            .process-step h3 {
+                font-size: 1.3rem;
+            }
+
+            .process-step p {
+                font-size: 0.9rem;
+            }
+
+            .step-detail {
+                font-size: 0.85rem;
+            }
+
+            .scenario-card {
+                min-height: 280px;
+            }
+
+            .scenario-content {
+                padding: 1.5rem;
+            }
+
+            .scenario-content h3 {
+                font-size: 1.2rem;
+            }
+
+            .scenario-content li {
+                font-size: 0.85rem;
+            }
+
+            .why-choose-section {
+                padding: 3rem 1rem;
+            }
+
+            .why-content h2 {
+                font-size: 1.8rem;
+            }
+
+            .why-item {
+                padding: 1.5rem;
+            }
+
+            .why-item h3 {
+                font-size: 1.1rem;
+            }
+
+            .why-item p {
+                font-size: 0.9rem;
             }
         }
     </style>

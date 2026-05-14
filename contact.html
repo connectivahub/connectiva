@@ -11,6 +11,11 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">ConnectivaHub</div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="how-it-works.html">How It Works</a></li>
@@ -302,6 +307,7 @@
         .form-group select,
         .form-group textarea {
             width: 100%;
+            max-width: 100%;
             padding: 0.8rem;
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(0, 212, 255, 0.3);
@@ -310,6 +316,12 @@
             font-family: inherit;
             font-size: 1rem;
             transition: all 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
         }
 
         .form-group input::placeholder,
@@ -379,6 +391,26 @@
         }
 
         @media (max-width: 768px) {
+            .page-header {
+                padding-top: 100px;
+                min-height: 300px;
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+                background-attachment: scroll;
+            }
+
+            .header-content h1 {
+                font-size: 2rem;
+            }
+
+            .header-content p {
+                font-size: 1rem;
+            }
+
+            .contact-section {
+                padding: 4rem 1.5rem;
+            }
+
             .contact-container {
                 grid-template-columns: 1fr;
                 gap: 2rem;
@@ -388,12 +420,69 @@
                 grid-template-columns: 1fr;
             }
 
-            .header-content h1 {
-                font-size: 2rem;
+            .quick-contact {
+                padding: 3rem 1.5rem;
+                background-attachment: scroll;
             }
 
             .quick-content h2 {
                 font-size: 1.8rem;
+            }
+
+            .quick-content p {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-header {
+                padding-top: 80px;
+                min-height: 250px;
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
+            .header-content h1 {
+                font-size: 1.6rem;
+            }
+
+            .header-content p {
+                font-size: 0.9rem;
+            }
+
+            .contact-section {
+                padding: 3rem 1rem;
+            }
+
+            .info-card {
+                padding: 1.5rem;
+            }
+
+            .contact-form-section {
+                padding: 1.5rem;
+            }
+
+            .contact-form-section h2 {
+                font-size: 1.5rem;
+            }
+
+            .form-group {
+                margin-bottom: 1.2rem;
+            }
+
+            .form-group input,
+            .form-group select,
+            .form-group textarea {
+                padding: 0.7rem;
+                font-size: 0.95rem;
+            }
+
+            .quick-contact {
+                padding: 2rem 1rem;
+            }
+
+            .quick-content h2 {
+                font-size: 1.5rem;
             }
         }
     </style>
